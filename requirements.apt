@@ -7,6 +7,10 @@ gettext
 python3.4-dev
 python3-setuptools
 
+# development tools
+mercurial
+git-core
+
 ## shared dependencies of:
 ## Pillow, pylibmc
 zlib1g-dev
