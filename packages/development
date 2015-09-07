@@ -4,6 +4,7 @@ build-essential
 mercurial
 git-core
 python3.4-dev
+libpython3.4-dev
 python3-setuptools
 
 ## shared dependencies of:
