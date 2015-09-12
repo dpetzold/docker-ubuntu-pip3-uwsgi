@@ -20,10 +20,6 @@ RUN apt-get install -y \
 RUN apt-get install -y zlib1g-dev \
   --no-install-recommends
 
-## django-extensions
-RUN apt-get install -y graphviz-dev \
-  --no-install-recommends
-
 ## Pillow dependencies
 RUN apt-get install -y \
     libtiff4-dev \
