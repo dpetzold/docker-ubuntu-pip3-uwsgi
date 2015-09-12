@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 ADD . /src
 WORKDIR /src
+
 RUN apt-get update
 
 ## basic build dependencies of various Django apps for Ubuntu 14.04
