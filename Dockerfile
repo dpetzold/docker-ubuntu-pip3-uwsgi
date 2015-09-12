@@ -12,7 +12,7 @@ RUN apt-get install -y \
   git-core \
   python3.4-dev \
   libpython3.4-dev \
-  curl
+  wget
   
 ## shared dependencies of:
 ## Pillow, pylibmc
@@ -40,5 +40,5 @@ RUN apt-get install -y \
 # required to translate
 RUN apt-get install -y gettext
 
-RUN curl https://bootstrap.pypa.io/get-pip.py
+RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py
