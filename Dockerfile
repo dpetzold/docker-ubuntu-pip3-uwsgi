@@ -1,25 +1,11 @@
-FROM ubuntu:latest
-ADD . /src
-WORKDIR /src
+FROM dpetzold/ubuntu-pip3:latest
 
 RUN apt-get update && apt-get install -y \
     build-essential \
-    curl \
-    gettext \
-    git-core \
-    libfreetype6-dev \
-    libjpeg8-dev \
-    liblcms1-dev \
-    libmemcached-dev \
-    libpq-dev \
-    libpython3.4-dev \
-    libssl-dev \
-    libtiff4-dev \
-    libwebp-dev \
-    mercurial \
-    python3.4-dev \
-    python3-pip \
-    zlib1g-dev \
+		python3.4 \
+		python3.4-dev \
+	 	libpcre3-dev \
+		libgeoip-dev \ 
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --upgrade pip
+pip3 install --uprgade uWSGI
