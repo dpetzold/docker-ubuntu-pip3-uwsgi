@@ -1,4 +1,4 @@
-FROM dpetzold/ubuntu-pip3:latest
+FROM dpetzold/ubuntu-latest-pip3:latest
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -8,4 +8,14 @@ RUN apt-get update && apt-get install -y \
 		libgeoip-dev \ 
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-pip3 install --uprgade uWSGI
+RUN pip3 install --upgrade uWSGI
+
+RUN mkdir /var/log/uwsgi
+RUN mkdir /var/run/uwsgi
+RUN chown nobody:nogroup /var/run/uwsgi
+RUN chown nobody:nogroup /var/log/uwsgi
+
+# RUN sysctl -w net.core.somaxconn=8192
+
+EXPOSE 8000
+CMD ["uwsgi", "config/uwsgi.ini"]
