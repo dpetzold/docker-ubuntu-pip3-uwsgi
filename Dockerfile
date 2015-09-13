@@ -2,7 +2,7 @@ FROM ubuntu:latest
 ADD . /src
 WORKDIR /src
 
-RUN apt-get update
+RUN apt-get update && apt-get -y dist-upgrade
 
 ## basic build dependencies of various Django apps for Ubuntu 14.04
 # build-essential metapackage install: make, gcc, g++,
@@ -12,7 +12,7 @@ RUN apt-get install -y \
     git-core \
     python3.4-dev \
     libpython3.4-dev \
-    wget \
+    python3-pip \
   --no-install-recommends
 
 ## shared dependencies of:
@@ -42,5 +42,4 @@ RUN apt-get install -y \
 RUN apt-get install -y gettext \
   --no-install-recommends
 
-RUN wget https://bootstrap.pypa.io/get-pip.py
-RUN python3 get-pip.py
+RUN pip3 install --upgrade pip
