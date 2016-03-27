@@ -7,4 +7,4 @@ push:
 	docker push dpetzold/ubuntu-pip3-uwsgi:latest
 
 shell:
-	docker run -it dpetzold/ubuntu-pip3:latest /bin/bash
+	docker run -it dpetzold/ubuntu-pip3-uwsgi:latest /bin/bash

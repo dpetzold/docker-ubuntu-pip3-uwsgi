@@ -1,4 +1,4 @@
-FROM dpetzold/ubuntu-latest-pip3:latest
+FROM dpetzold/ubuntu-pip3:latest
 
 RUN apt-get update && apt-get install -y \
 		build-essential \
