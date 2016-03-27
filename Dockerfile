@@ -14,7 +14,5 @@ RUN mkdir /var/run/uwsgi
 RUN chown nobody:nogroup /var/run/uwsgi
 RUN chown nobody:nogroup /var/log/uwsgi
 
-# RUN sysctl -w net.core.somaxconn=8192
-
 EXPOSE 9000
 CMD ["uwsgi", "config/uwsgi.ini"]
