@@ -2,8 +2,6 @@ FROM dpetzold/ubuntu-pip3:latest
 
 RUN apt-get update && apt-get install -y \
 		build-essential \
-		python3.5-dev \
-		libpython3.5-dev \
 	 	libpcre3-dev \
 		libgeoip-dev \ 
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
