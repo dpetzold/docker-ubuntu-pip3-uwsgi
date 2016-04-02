@@ -1,14 +1,12 @@
 FROM dpetzold/ubuntu-pip3:latest
 
 RUN apt-get update && apt-get install -y \
-    ca-certificates \
 		build-essential \
     libcurl4-openssl-dev \
 	 	libpcre3-dev \
 		libgeoip-dev \ 
     liblzma-dev \
     libxml2-dev \
-    wget \
     zlib1g-dev \
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
