@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
 	 	libpcre3-dev \
 		libgeoip-dev \ 
     liblzma-dev \
+    libssl-dev \
     libxml2-dev \
     zlib1g-dev \
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
